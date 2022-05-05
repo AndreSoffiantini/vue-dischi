@@ -1,6 +1,6 @@
 <template>
     
-    <header class="bg-secondary p-2">
+    <header class="p-2">
         <img src="@/assets/img/logo-small.svg" alt="Logo">
     </header>
 
@@ -14,8 +14,12 @@ export default {
 
 <style lang="scss" scoped>
 
-    img {
-        height: 30px;
-    }
+    header {
+        background-color: $header_cards;
+        height: 5vh;
+        img {
+            height: 30px;
+        }
+    }   
 
 </style>
