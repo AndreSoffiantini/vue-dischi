@@ -1,26 +1,25 @@
 <template>
   <div id="app">
     
-    <div class="container bg-secondary vh-100">
-      <div class="row">
-        <div class="col-2 bg-primary" v-for="album in albums" :key="album.title">
-          {{album.title}}
-        </div>
-      </div>
-    </div>
+    <Header/>
+
+    <Main/>
 
   </div>
 </template>
 
 <script>
-import axios from "axios";
+//import axios from "axios";
+import Header from "@/components/HeaderComponent.vue"
+import Main from "@/components/MainComponent.vue"
 
 export default {
   name: 'App',
   components: {
-    
+    Header,
+    Main
   },
-  data() {
+  /* data() {
     return {
       api_url: "https://flynn.boolean.careers/exercises/api/array/music",
       albums: null,
@@ -45,7 +44,7 @@ export default {
   },
   mounted() {
     this.callApi();
-  },
+  }, */
 }
 
 </script>
