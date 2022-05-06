@@ -2,7 +2,7 @@
 
     <main class="d-flex align-items-center justify-content-center">
         
-        <AlbumsSection/>
+        <AlbumsSection :albums="albums"/>
 
     </main>
     
@@ -12,6 +12,9 @@
 import AlbumsSection from "@/components/AlbumsSectionComponent.vue"
 export default {
     name: 'MainComponent',
+    props: {
+        albums: Array
+    },
     components: {
         AlbumsSection
     }
@@ -21,7 +24,7 @@ export default {
 <style lang="scss" scoped>
     main {
         background-color: $main;
-        height: 95vh;
+        height: 94vh;
     }
 </style>
 

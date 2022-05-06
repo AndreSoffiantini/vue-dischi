@@ -1,14 +1,28 @@
 <template>
     
-    <header class="p-2">
+    <header class="p-2 d-flex justify-content-between align-items-center">
         <img src="@/assets/img/logo-small.svg" alt="Logo">
+        <GenreSelect :albums="albums" v-model="genre" @selectSubmit="filter"/>
     </header>
 
 </template>
 
 <script>
+import GenreSelect from '@/components/GenreSelectComponent.vue'
+
 export default {
-    name: 'HeaderComponent'
+    name: 'HeaderComponent',
+    props: {
+        albums: Array
+    },
+    components: {
+        GenreSelect
+    },
+    methods: {
+        filter() {
+            console.log('Filter');
+        },
+    },
 }
 </script>
 
@@ -16,7 +30,7 @@ export default {
 
     header {
         background-color: $header_cards;
-        height: 5vh;
+        height: 6vh;
         img {
             height: 30px;
         }

@@ -24,10 +24,12 @@ export default {
     .album_card {
         background-color: $header_cards;
         height: 100%;
-    }
-    
-    img {
+
+        img {
         height: 200px;
         aspect-ratio: 1;
+        }
     }
+    
+    
 </style>
