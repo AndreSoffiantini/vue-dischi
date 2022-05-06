@@ -8,7 +8,8 @@
 </template>
 
 <script>
-import GenreSelect from '@/components/GenreSelectComponent.vue'
+import GenreSelect from '@/components/GenreSelectComponent.vue';
+import state from "@/state.js";
 
 export default {
     name: 'HeaderComponent',
@@ -20,12 +21,15 @@ export default {
     },
     data() {
         return {
-        value: "",
+            value: ""
         };
     },
     methods: {
         filter() {
-            console.log('Filter');
+            /* console.log('Filter'); */
+            //console.log(this.value);
+            state.value = this.value;
+            //console.log(state.value);
         },
     },
 }
