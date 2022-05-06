@@ -2,7 +2,7 @@
     
     <header class="p-2 d-flex justify-content-between align-items-center">
         <img src="@/assets/img/logo-small.svg" alt="Logo">
-        <GenreSelect :albums="albums" v-model="genre" @selectSubmit="filter"/>
+        <GenreSelect :albums="albums" v-model="value" @selectSubmit="filter"/>
     </header>
 
 </template>
@@ -17,6 +17,11 @@ export default {
     },
     components: {
         GenreSelect
+    },
+    data() {
+        return {
+        value: "",
+        };
     },
     methods: {
         filter() {
